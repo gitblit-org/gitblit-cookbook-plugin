@@ -1,6 +1,6 @@
 Cookbook Gitblit plugin
 
-This plugin currently depends on two changes [1],[2].
+This plugin currently depends on this change [1].
 
 To build, apply the changes and execute:
 
@@ -19,4 +19,3 @@ Bonjour tout le monde!
 ```
 
 * [1] https://dev.gitblit.com/tickets/gitblit.git/6
-* [2] https://dev.gitblit.com/tickets/gitblit.git/23
