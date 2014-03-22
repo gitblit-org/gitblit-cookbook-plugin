@@ -49,9 +49,9 @@ public class GitblitCookbookPlugin extends Plugin {
   @CommandMetaData(name = "cookbook", description = "Example commands")
   public static class CookbookDispatcher extends DispatchCommand {
     @Override
-    protected void registerCommands(UserModel user) {
-        registerCommand(user, HelloWorldCommand.class);
-        registerCommand(user, StatusCommand.class);
+    protected void setup(UserModel user) {
+        register(user, HelloWorldCommand.class);
+        register(user, StatusCommand.class);
     }
   }
 }
