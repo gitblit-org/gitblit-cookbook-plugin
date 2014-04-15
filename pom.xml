@@ -18,6 +18,13 @@
 		<plugin.dependencies />
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>gitblit</id>
+			<url>http://gitblit.github.io/gitblit-maven/</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<resources>
 			<resource>
