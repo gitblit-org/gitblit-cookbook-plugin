@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.gitblit.plugins.cookbook;
+package com.gitblit.plugin.cookbook;
 
 import org.kohsuke.args4j.Argument;
 import org.kohsuke.args4j.Option;

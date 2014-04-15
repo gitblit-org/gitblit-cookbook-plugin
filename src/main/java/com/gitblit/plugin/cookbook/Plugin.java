@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.gitblit.plugins.cookbook;
+package com.gitblit.plugin.cookbook;
 
 import ro.fortsoft.pf4j.Extension;
-import ro.fortsoft.pf4j.Plugin;
 import ro.fortsoft.pf4j.PluginWrapper;
 
+import com.gitblit.extensions.GitblitPlugin;
 import com.gitblit.models.UserModel;
 import com.gitblit.transport.ssh.commands.CommandMetaData;
 import com.gitblit.transport.ssh.commands.DispatchCommand;
 
-public class GitblitCookbookPlugin extends Plugin {
+public class Plugin extends GitblitPlugin {
 
-  public GitblitCookbookPlugin(PluginWrapper wrapper) {
+  public Plugin(PluginWrapper wrapper) {
     super(wrapper);
   }
 
