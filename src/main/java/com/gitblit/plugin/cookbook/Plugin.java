@@ -15,14 +15,10 @@
  */
 package com.gitblit.plugin.cookbook;
 
-import ro.fortsoft.pf4j.Extension;
 import ro.fortsoft.pf4j.PluginWrapper;
 import ro.fortsoft.pf4j.Version;
 
 import com.gitblit.extensions.GitblitPlugin;
-import com.gitblit.models.UserModel;
-import com.gitblit.transport.ssh.commands.CommandMetaData;
-import com.gitblit.transport.ssh.commands.DispatchCommand;
 
 public class Plugin extends GitblitPlugin {
 
@@ -53,22 +49,5 @@ public class Plugin extends GitblitPlugin {
 	@Override
 	public void onUninstall() {
 		log.info("{} UNINSTALLED.", getWrapper().getPluginId());
-	}
-
-
-	/**
-	 * You must register a dispatcher for your custom commands. The dispatcher
-	 * must be annotated with CommandMetaData. This annotation will assign the
-	 * plugin command namespace and offer a description.
-	 *
-	 */
-	@Extension
-	@CommandMetaData(name = "cookbook", description = "Example commands")
-	public static class CookbookDispatcher extends DispatchCommand {
-		@Override
-		protected void setup(UserModel user) {
-			register(user, HelloWorldCommand.class);
-			register(user, StatusCommand.class);
-		}
 	}
 }
