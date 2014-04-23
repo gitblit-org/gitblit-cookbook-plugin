@@ -18,9 +18,10 @@ package com.gitblit.plugin.cookbook;
 import ro.fortsoft.pf4j.PluginWrapper;
 import ro.fortsoft.pf4j.Version;
 
-import com.gitblit.extensions.GitblitPlugin;
+import com.gitblit.extensions.GitblitWicketPlugin;
+import com.gitblit.wicket.GitblitWicketApp;
 
-public class Plugin extends GitblitPlugin {
+public class Plugin extends GitblitWicketPlugin {
 
 	public Plugin(PluginWrapper wrapper) {
 		super(wrapper);
@@ -49,5 +50,11 @@ public class Plugin extends GitblitPlugin {
 	@Override
 	public void onUninstall() {
 		log.info("{} UNINSTALLED.", getWrapper().getPluginId());
+	}
+
+	@Override
+	protected void init(GitblitWicketApp app) {
+		app.mount("/logo", LogoPage.class);
+		app.mount("/hello", HelloWorldPage.class);
 	}
 }
