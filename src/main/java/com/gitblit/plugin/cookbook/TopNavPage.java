@@ -27,9 +27,9 @@ import com.gitblit.wicket.pages.RootPage;
  * @author James Moger
  *
  */
-public class LogoPage extends RootPage {
+public class TopNavPage extends RootPage {
 
-	public LogoPage() {
+	public TopNavPage() {
 		super();
 
 		setupPage("", "logo");

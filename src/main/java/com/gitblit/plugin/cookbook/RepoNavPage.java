@@ -15,29 +15,32 @@
  */
 package com.gitblit.plugin.cookbook;
 
-import java.util.Arrays;
-import java.util.List;
+import org.apache.wicket.PageParameters;
+import org.apache.wicket.markup.html.basic.Label;
 
-import ro.fortsoft.pf4j.Extension;
-
-import com.gitblit.extensions.NavLinkExtension;
-import com.gitblit.models.NavLink;
-import com.gitblit.models.NavLink.PageNavLink;
-import com.gitblit.models.UserModel;
+import com.gitblit.models.RepositoryModel;
+import com.gitblit.wicket.pages.RepositoryPage;
 
 /**
- * Adds an logo navigation link to all root pages.
+ * Example repository page.
+ *
+ * This page displays the repository name.
  *
  * @author James Moger
  *
  */
-@Extension
-public class LogoNavLink extends NavLinkExtension {
+public class RepoNavPage extends RepositoryPage {
 
-	@Override
-	public List<NavLink> getNavLinks(UserModel user) {
-		NavLink link = new PageNavLink("logo", LogoPage.class);
-		return Arrays.asList(link);
+	public RepoNavPage(PageParameters params) {
+		super(params);
+
+		RepositoryModel model = getRepositoryModel();
+
+		add(new Label("cookbook.repositoryName", model.toString()));
 	}
 
+	@Override
+	protected String getPageName() {
+		return "cookbook";
+	}
 }

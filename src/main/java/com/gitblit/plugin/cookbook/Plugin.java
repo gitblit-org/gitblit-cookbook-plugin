@@ -54,7 +54,7 @@ public class Plugin extends GitblitWicketPlugin {
 
 	@Override
 	protected void init(GitblitWicketApp app) {
-		app.mount("/logo", LogoPage.class);
+		app.mount("/cookbook", TopNavPage.class);
 		app.mount("/hello", HelloWorldPage.class);
 	}
 }
