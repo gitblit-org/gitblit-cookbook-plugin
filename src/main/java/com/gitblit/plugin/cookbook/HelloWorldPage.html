@@ -6,10 +6,10 @@
       
 	<wicket:extend>
 		<div class="hero-unit">
-			<h1>Hello, <span wicket:id="who"></span>!</h1>
-			<p>You have successfully loaded a page from this plugin.</p>
+			<h1><wicket:message key="hello.hello"></wicket:message> <span wicket:id="who"></span>!</h1>
+			<p><wicket:message key="hello.loadMessage"></wicket:message></p>
 			<p>
-				<a class="btn btn-appmenu btn-large" wicket:id="gohome">Return Home</a>
+				<a class="btn btn-appmenu btn-large" wicket:id="gohome"><wicket:message key="hello.returnHome"></wicket:message></a>
   			</p>
 		</div>
 	</wicket:extend>
