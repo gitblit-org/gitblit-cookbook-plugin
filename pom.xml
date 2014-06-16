@@ -6,7 +6,7 @@
 	<name>Gitblit Cookbook plugin</name>
 	<groupId>com.gitblit.plugins</groupId>
 	<artifactId>cookbook</artifactId>
-	<version>1.6.0-SNAPSHOT</version>
+	<version>1.6.0</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -14,6 +14,7 @@
 		<plugin.description>${project.name}</plugin.description>
 		<plugin.class>com.gitblit.plugin.cookbook.Plugin</plugin.class>
 		<plugin.version>${project.version}</plugin.version>
+		<plugin.requires>1.6.0</plugin.requires>
 		<plugin.provider>gitblit.com</plugin.provider>
 		<plugin.dependencies />
 	</properties>
@@ -147,6 +148,7 @@
 							<Plugin-Class>${plugin.class}</Plugin-Class>
 							<Plugin-Version>${plugin.version}</Plugin-Version>
 							<Plugin-Provider>${plugin.provider}</Plugin-Provider>
+							<Plugin-Requires>${plugin.requires}</Plugin-Requires>
 							<Plugin-Dependencies>${plugin.dependencies}</Plugin-Dependencies>
 						</manifestEntries>
 					</archive>
@@ -168,7 +170,7 @@
 		<dependency>
 			<groupId>com.gitblit</groupId>
 			<artifactId>gitblit</artifactId>
-			<version>1.6.0-SNAPSHOT</version>
+			<version>${plugin.requires}</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
