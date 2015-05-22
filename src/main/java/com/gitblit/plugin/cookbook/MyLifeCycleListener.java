@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import ro.fortsoft.pf4j.Extension;
 
 import com.gitblit.extensions.LifeCycleListener;
+import com.gitblit.manager.IRuntimeManager;
+import com.google.inject.Inject;
 
 /**
  * Example lifecycle listener.
@@ -32,9 +34,17 @@ public class MyLifeCycleListener extends LifeCycleListener {
 
 	final Logger log = LoggerFactory.getLogger(getClass());
 
+	final IRuntimeManager runtimeManager;
+
+	@Inject
+	public MyLifeCycleListener(IRuntimeManager runtimeManager) {
+		this.runtimeManager = runtimeManager;
+	}
+
     @Override
     public void onStartup() {
     	log.info("Gitblit is Ready!!");
+    	log.info(" - booted @ {}", runtimeManager.getBootDate());
     }
 
     @Override

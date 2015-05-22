@@ -14,7 +14,7 @@
 		<plugin.description>${project.name}</plugin.description>
 		<plugin.class>com.gitblit.plugin.cookbook.Plugin</plugin.class>
 		<plugin.version>${project.version}</plugin.version>
-		<plugin.requires>1.6.0</plugin.requires>
+		<plugin.requires>1.7.0-SNAPSHOT</plugin.requires>
 		<plugin.provider>gitblit.com</plugin.provider>
 		<plugin.dependencies />
 	</properties>
