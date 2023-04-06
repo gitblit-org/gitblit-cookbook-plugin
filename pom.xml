@@ -22,7 +22,7 @@
 	<repositories>
 		<repository>
 			<id>gitblit</id>
-			<url>http://gitblit.github.io/gitblit-maven/</url>
+			<url>http://gitblit-org.github.io/gitblit-maven/</url>
 		</repository>
 	</repositories>
 
